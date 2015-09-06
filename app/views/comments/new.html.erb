@@ -1,2 +1,7 @@
-<h1>Comments#new</h1>
-<p>Find me in app/views/comments/new.html.erb</p>
+<h2>New Comment</h2>
+
+<%= form_for :comment , url:{:action =>"create"} do |f|%>
+<%= f.text_field :user_name%>
+<%= f.text_field :user_comment%>
+<%= f.submit("post a comment")%>
+<%end%>	

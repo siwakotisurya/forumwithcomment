@@ -1,2 +1,11 @@
 <h1>Comments#index</h1>
 <p>Find me in app/views/comments/index.html.erb</p>
+
+<%@comments.each do |c|%>
+<%=c.user_name%>
+<%= link_to("Edit update", edit_post_comment_path(@post, c.id))%>
+<%=c.user_comment%>
+<br>
+
+<%end%>
+<%= link_to("New Comment",new_post_comment_path(@post))%>

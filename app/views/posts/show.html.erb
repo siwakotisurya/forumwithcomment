@@ -5,3 +5,5 @@
 <%= @post.user_post%>
 <%= render "footer"%>
 
+<h2>Post a Comment</h2>
+<%=link_to("Comment On a Post", post_comments_path(@post))%>
