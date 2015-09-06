@@ -1,0 +1,8 @@
+<%=render "header"%>
+<%=form_for (@post) do|f|%>
+<%=f.text_field :topic%>
+<%=f.text_field :user_name%>
+<%=f.text_field :user_post%>
+<%=f.submit("submit")%>
+<%end%>
+<%=render "footer"%>

@@ -1,0 +1,11 @@
+<%=render "header"%>
+<%=link_to("Create A New Post",{:action => "new"})%>
+<%@posts.each do |all|%>
+<br>
+<%=link_to(all.topic,{:action =>"show", :id => all.id})%>
+<%=link_to("Edit/Update",{:action =>"edit", :id => all.id})%>
+<%=link_to("delete",all, method: :delete)%>
+<br>
+<%=all.created_at%>
+<%end%>
+<%= render "footer"%>
